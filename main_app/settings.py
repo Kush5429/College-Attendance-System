@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security settings
 SECRET_KEY = 'your-secret-key'  # Replace with a secure random key
 DEBUG = True
-ALLOWED_HOSTS = ['your-app-name.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'college-attendance-system.onrender.com']
 
 # Installed apps
 INSTALLED_APPS = [
