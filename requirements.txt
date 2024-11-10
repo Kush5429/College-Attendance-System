@@ -3,6 +3,7 @@ certifi==2024.8.30
 charset-normalizer==3.4.0
 dj-database-url==2.3.0
 Django==5.1.2
+gunicorn==20.1.1  # Add gunicorn here
 idna==3.10
 pillow==11.0.0
 requests==2.32.3
