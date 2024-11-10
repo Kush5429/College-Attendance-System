@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security settings
 SECRET_KEY = 'your-secret-key'  # Replace with a secure random key
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['your-app-name.onrender.com', '127.0.0.1', 'localhost']
 
 # Installed apps
 INSTALLED_APPS = [
@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_app',  # Add your app name here if not automatically included
@@ -63,7 +64,8 @@ DATABASES = {
 }
 
 # Static files
-STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Folder where static files will be collected
+STATIC_URL = '/static/'  # URL where the static files will be accessible
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
